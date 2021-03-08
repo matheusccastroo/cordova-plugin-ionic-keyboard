@@ -56,10 +56,6 @@ public class CDVIonicKeyboard extends CordovaPlugin {
                     int previousHeightDiff = 0;
                     @Override
                     public void onGlobalLayout() {
-                        boolean resize = preferences.getBoolean("resizeOnFullScreen", false);
-                        if (resize) {
-                            possiblyResizeChildOfContent();
-                        }
                         Rect r = new Rect();
                         //r will be populated with the coordinates of your view that area still visible.
                         rootView.getWindowVisibleDisplayFrame(r);
