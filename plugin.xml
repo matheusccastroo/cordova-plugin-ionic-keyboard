@@ -13,23 +13,6 @@
 	    <engine name="cordova" version=">=3.2.0"/>
     </engines>
 
-    <!-- ios -->
-    <platform name="ios">
-
-        <js-module src="www/ios/keyboard.js" name="keyboard">
-    	    <clobbers target="window.Keyboard"/>
-        </js-module>
-
-        <config-file target="config.xml" parent="/*">
-            <feature name="CDVIonicKeyboard">
-                <param name="ios-package" value="CDVIonicKeyboard" onload="true"/>
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/CDVIonicKeyboard.h"/>
-        <source-file src="src/ios/CDVIonicKeyboard.m"/>
-    </platform>
-
     <!-- android -->
     <platform name="android">
         <js-module src="www/android/keyboard.js" name="keyboard">
