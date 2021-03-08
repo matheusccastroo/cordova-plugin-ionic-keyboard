@@ -50,7 +50,10 @@ Keyboard.show = function () {
 };
 
 channel.onCordovaReady.subscribe(function () {
-    exec(success, null, 'CDVIonicKeyboard', 'init', []);
+    exec(success, (err) => {
+        console.log("LALALALAL")
+        console.log(err)
+    }, 'CDVIonicKeyboard', 'init', []);
 
     function success(msg) {
         var action = msg.charAt(0);
