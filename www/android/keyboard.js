@@ -37,28 +37,12 @@ Keyboard.fireOnShowing = function (height) {
     });
 };
 
-Keyboard.hideFormAccessoryBar = Keyboard.hideKeyboardAccessoryBar = function (hide) {
-    console.warn("Keyboard.hideKeyboardAccessoryBar() not supported in Android");
-};
-
 Keyboard.hide = function () {
     exec(null, null, "CDVIonicKeyboard", "hide", []);
 };
 
 Keyboard.show = function () {
     exec(null, null, "CDVIonicKeyboard", "show", []);
-};
-
-Keyboard.disableScroll = function (disable) {
-    console.warn("Keyboard.disableScroll() not supported in Android");
-};
-
-Keyboard.setResizeMode = function (mode) {
-    console.warn("Keyboard.setResizeMode() not supported in Android");
-}
-
-Keyboard.setKeyboardStyle = function(style) {
-    console.warn("Keyboard.setKeyboardStyle() not supported in Android");
 };
 
 channel.onCordovaReady.subscribe(function () {
