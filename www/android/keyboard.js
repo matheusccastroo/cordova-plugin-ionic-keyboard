@@ -5,6 +5,10 @@ var argscheck = require('cordova/argscheck'),
 
 var Keyboard = function () {};
 
+const KeyboardPlugin = {
+    getHeight: () => (arg, success, error) => cordova.exec(success, error, "CDVIonicKeyboad", "getHeight", [arg])
+}
+
 Keyboard.fireOnShow = function (height) {
     Keyboard.isVisible = true;
     cordova.fireWindowEvent('keyboardDidShow', {
