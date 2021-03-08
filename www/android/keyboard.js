@@ -72,4 +72,5 @@ channel.onCordovaReady.subscribe(function () {
 
 Keyboard.isVisible = false;
 
+module.exports = Keyboard;
 module.exports = KeyboardPlugin;
